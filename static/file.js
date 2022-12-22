@@ -144,7 +144,7 @@ $(() => {
                     return xhr;
                 },
                 success: res => {
-                    var imgSrc = 'https://ipfs-getway.eallsion.xyz/ipfs/'+res.Hash
+                    var imgSrc = 'https://gateway.originprotocol.com/ipfs/'+res.Hash
                     /* 清除input框 */
                     $('#file').val(null);
                     if (res.code === -1) {
@@ -246,11 +246,7 @@ function sel(obj){
 function chage(obj){
 	for(var i=0;i<document.querySelectorAll("#show").length;i++){
         var id = document.querySelectorAll("#show")[i].value.match(/\w{46}/g)[0];
-        // if(obj.indexOf("cf-ipfs.com")!=-1){
-        //     var newurl = 'https://bafybeidzqxzosahqotekbeb47i6ubstxtkmoxva4oi6fs77siyqqwz6nxq.ipfs.cf-ipfs.com/';
-        // }else{
-            
-        // }
+
         var newurl = 'https://'+obj.value+"/ipfs/"+id;
 		
 		document.querySelectorAll("#show")[i].value = newurl;
